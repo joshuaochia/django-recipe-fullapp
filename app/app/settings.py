@@ -3,16 +3,12 @@ import os
 import environ
 
 
-# BASE_DIR
+# BASE_DIR and Template DIR
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-#Other DIR
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
-# set casting of django-environ
+# set casting of django-environ and read the .env file
 env = environ.Env()
-
-# Take environment variables from .env file
 environ.Env.read_env(os.path.join(BASE_DIR.parent, '.env'))
 
 # SECURITY and HOSTING
@@ -86,7 +82,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
